@@ -1,6 +1,6 @@
 {
   "name": "webpack-dev-server-mock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "简单的模拟数据支持",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "url": "https://github.com/mfylee/webpack-dev-server-mock/issues"
   },
   "homepage": "https://github.com/mfylee/webpack-dev-server-mock#readme",
-  "devDependencies": {
+  "dependencies": {
     "body-parser": "^1.17.2",
     "chalk": "^2.0.1"
   }

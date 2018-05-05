@@ -70,7 +70,7 @@ mockup.setup = function(options) {
  */
 mockup.ok = function (result) {
     return {
-        success: true,
+        code: 0,
         data: result || {}
     };
 };
@@ -85,12 +85,12 @@ mockup.list = function (result, page) {
     page = page || {};
 
     var response = {
-        success: true,
+        code: 0,
         data: {
             page: {
-                totalCount: page.totalCount || 100,
-                pageNo: page.pageNo || 1,
-                pageSize: page.pageSize || 15,
+                total: page.total || 100,
+                number: page.number || 1,
+                size: page.size || 15,
                 orderBy: page.orderBy || 'id',
                 order: page.order || 'desc',
             },
@@ -105,9 +105,9 @@ mockup.list = function (result, page) {
  *
  * @param {Object} msg 失败信息
  */
-mockup.fail = function (msg) {
+mockup.fail = function (code, msg) {
     return {
-        success: false,
+        code: code || 1,
         message: msg
     };
 };
